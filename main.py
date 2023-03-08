@@ -67,6 +67,7 @@ print(slownik)
 del slownik[3]
 print(slownik)
 
+
 print(slownik.keys())
 print(slownik.values())
 
