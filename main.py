@@ -155,9 +155,9 @@ list =[3,5,2,5,3,7]
 
 #petla z liczbami ktora bedzie zawierala jeeden element kilka razy 4 elementy o wartosci '2' uzywajac petli while usunac wszystkie lementy z listy rowne 2
 
-list=[1,2,2,2,2]
-licznik=0
-while licznik != list.count(2):
+list=[1,2,3,2,2,2]
+
+while 0 != list.count(2):
     print(list)
     list.remove(2)
 else:
