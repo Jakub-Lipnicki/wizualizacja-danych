@@ -38,4 +38,25 @@ import random
 #     return ((a5+b5)*h5)/2
 # print(poleTrapezu())
 
-#zadanie 6:
+# #zadanie 6:
+# #a=wartosc poczatkowa b=wielkosc ile=ile elementow ma mnozyc
+# def iloczynCiagu(a6=1,b6=4,ile=10):
+#     wartPocz = a6
+#     wynik = 1
+#     for a6 in range(0,ile):
+#         wynik = wartPocz*(wartPocz+b6)
+#         wartPocz += b6
+#     return wynik
+#
+# print(iloczynCiagu())
+
+# #zadanie 7:
+
+
+
+# #zadanie 8:
+# listaZak={'mleko':'3.20', 'chleb':'3.1', 'karma':'9.99', 'maslo':'4'}
+# def listaZakupow(** listaZak):
+#     print(listaZak['mleko'])
+#
+# listaZakupow(listaZak)
