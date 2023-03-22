@@ -44,7 +44,16 @@
 #zadanie 5:
 
 class Ciag:
+    def __init__(self, a1, r, an):
+        self.a1=a1
+        self.r=r
+        self.an=an
+    def wyswietl_dane(self):
+        return self.a1, self.r, self.an
 
+ciagi = Ciag(1,1,5)
+
+print(ciagi.wyswietl_dane())
 
 
 
