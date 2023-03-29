@@ -40,3 +40,4 @@ for line in plik:
 plik.close()
 
 
+
