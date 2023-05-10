@@ -33,31 +33,72 @@ print(df)
 # df = pd.read_excel(xlsx, header=0)
 # print(df)
 # df.to_excel('wyniki.xlsx',sheet_name='arkuszpierwszy')
-print(s['c'])
-print(s.c)
-
-# pojedynczy elemenet ramki danych, tak jak przy cięciu tablic, oparte na indeksach
-print(df[0:1])
-print("")
-# kolumna po etykiecie
-print(df['Populacja'])
-
-# pobieranie pojedynczej wartości po indeksie wiersza i kolumny
-print(df.iloc[0, 0])
-# pobieranie wartości po indeksie wiersza i etykiecie kolumny
-print(df.loc[0, "Kraj"])
-print(df.at[0, "Kraj"])
-
-# podobnie jak wprzypadku serii można odwoływać się do kolumn jak do pól klasy
-# dodatkowo print jest wywoływany jak w pętli dla każdego elementu danej kolumny
-print('kraj: ' + df.Kraj)
-
-# Pandas posiada również funkcje pozwalające na losowe pobieranie elementów lub# w odniesieniu do procentowej wielkości całego zbioru
+# print(s['c'])
+# print(s.c)
 #
-# jeden losowy element
-print(df.sample())
+# # pojedynczy elemenet ramki danych, tak jak przy cięciu tablic, oparte na indeksach
+# print(df[0:1])
+# print("")
+# # kolumna po etykiecie
+# print(df['Populacja'])
+#
+# # pobieranie pojedynczej wartości po indeksie wiersza i kolumny
+# print(df.iloc[0, 0])
+# # pobieranie wartości po indeksie wiersza i etykiecie kolumny
+# print(df.loc[0, "Kraj"])
+# print(df.at[0, "Kraj"])
+#
+# # podobnie jak wprzypadku serii można odwoływać się do kolumn jak do pól klasy
+# # dodatkowo print jest wywoływany jak w pętli dla każdego elementu danej kolumny
+# print('kraj: ' + df.Kraj)
+#
+# # Pandas posiada również funkcje pozwalające na losowe pobieranie elementów lub# w odniesieniu do procentowej wielkości całego zbioru
+# #
+# # jeden losowy element
+# print(df.sample())
+#
+# #n losowych elementów
+# print(df.sample(2))
+# # ilość elementów procentowo, uwaga na zaokrąglenie
+# print(df.sample(frac=0.5))
 
-#n losowych elementów
-print(df.sample(2))
-# ilość elementów procentowo, uwaga na zaokrąglenie
-print(df.sample(frac=0.5))
+
+# zad 1
+xlsx = pd.ExcelFile('imiona.xlsx')
+df = pd.read_excel(xlsx, header=0)
+print(df)
+
+# zad 2
+# print(df[df['Liczba']>100])
+
+# print(df[df['Imie']=='JAKUB'])
+
+#print(df.loc[df['Rok'] == 2001, 'Liczba'].sum())
+
+# a = df.loc[(df['Rok'] == 2002), 'Liczba'].sum()
+# b = df.loc[(df['Rok'] == 2001), 'Liczba'].sum()
+# print(a+b)
+
+# print("Chlopcy: ",df.loc[(df['Plec'] == 'M'), 'Liczba'].sum())
+# print("Dziewoje: ",df.loc[(df['Plec'] == 'K'), 'Liczba'].sum())
+
+print(df[df['Imie']=='JAKUB'])
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
