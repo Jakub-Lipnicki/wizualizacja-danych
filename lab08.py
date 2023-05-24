@@ -2,6 +2,10 @@ import matplotlib.pyplot as plt
 import math
 import numpy as np
 import pandas as pd
+import seaborn as sns
+
+
+
 
 # plt.plot([1,3*3,math.sqrt(5),pow(7,2),21])
 # plt.show()
@@ -97,12 +101,12 @@ y2 = np.cos(x2)
 #
 # plt.show()
 
-data = {'kraj':['Belgia', 'Idie', 'Brazylia', 'Polska'],
-        'Stolica':['Bruksela', 'New Delhi', 'Brasilia', 'Warsaw'],
-        'Kontynent':['europa', 'azja', 'am.south', 'europa'],
-        'Populacja':[11190846, 1303171035, 207847584, 38675912]}
-df = pd.DataFrame(data)
-print(df)
+# data = {'kraj':['Belgia', 'Idie', 'Brazylia', 'Polska'],
+#         'Stolica':['Bruksela', 'New Delhi', 'Brasilia', 'Warsaw'],
+#         'Kontynent':['europa', 'azja', 'am.south', 'europa'],
+#         'Populacja':[11190846, 1303171035, 207847584, 38675912]}
+# df = pd.DataFrame(data)
+# print(df)
 # grupa = df.groupby('Kontynent')
 # etykiety = list(grupa.groups.keys())
 # wartosci = list(grupa.agg('Populacja').sum())
@@ -131,15 +135,15 @@ print(df)
 # ts.plot()
 # plt.show()
 
-df = pd.read_csv('zamowienia.csv.csv', header=0, sep=';', decimal='.')
-printf(df)
-groupa = df.groupby('Imie i nazwisko').agg({'Wartość zamówienia': ['sum']})
-grupa.plot(kind='pie', subplots=True, autopct='%.2f%%', fontsize=20, figsize=(6, 6), colors=['red', 'green'])
-
-plt.legend(loc='lower right')
-plt.title('Tytul')
-plt.show()
-
+# df = pd.read_csv('zamowienia.csv.csv', header=0, sep=';', decimal='.')
+# printf(df)
+# groupa = df.groupby('Imie i nazwisko').agg({'Wartość zamówienia': ['sum']})
+# grupa.plot(kind='pie', subplots=True, autopct='%.2f%%', fontsize=20, figsize=(6, 6), colors=['red', 'green'])
+#
+# plt.legend(loc='lower right')
+# plt.title('Tytul')
+# plt.show()
+#
 
 
 
