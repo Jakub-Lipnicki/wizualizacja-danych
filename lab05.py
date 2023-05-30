@@ -1,8 +1,37 @@
 import numpy as np
 
 # zad 1:
-a = np.arange(4+4, )
+# arange stwórz tablicę numpyskładającą się z 20 kolejnych wielokrotności liczby 4.
+a = np.arange(4, 4 * 21, 4)
 print(a)
+
+# zad 2:
+# Stwórz listę składającą się z wartości zmiennoprzecinkowych a następnie zapisz do innej zmiennej jej kopię przekonwertowaną na typ int32
+lista = [2.1, 3.4, 9.9]
+tab = np.array(lista)
+kopia = tab.astype(np.int32)
+print(kopia)
+
+# zad 3:
+# Napisz funkcję, która będzie:
+# •Przyjmowała jeden parametr ‘n’ w postaci liczby całkowitej
+# •Zwracała tablicę Numpy o wymiarach n*n kolejnych potęg liczby 2
+def tab_pow(n):
+    potega = np.arange(n**2).reshape(n, n)
+    return potega
+n = 8
+wynik = tab_pow(n)
+print(wynik)
+
+#zad 4:
+# Napisz funkcję, która będzie przyjmowała 2 parametry:
+# liczbę, która będzie podstawą operacji potęgowania oraz ilość kolejnych potęg do wygenerowania.
+# Korzystając z funkcji logspace generuj tablicę jednowymiarową kolejnych potęg podanej liczby, np. generuj(2,4) -> [2,4,8,16]
+
+def zad4(a, b):
+    potega = np.power(a, np.arange(1, b+1))
+    return potega
+
 
 
 
